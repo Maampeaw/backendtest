@@ -42,11 +42,12 @@ app.get("/items", listItems )
 
 
 
-
-app.listen(port, (error)=>{
+const myServer =() => { app.listen(port, (error)=>{
     if(!error){
         console.log(`Server running on port: ${port}`)
     }else{
         console.log("problem connecting to server")
     }
-})
+})}
+
+module.exports = {myServer}
